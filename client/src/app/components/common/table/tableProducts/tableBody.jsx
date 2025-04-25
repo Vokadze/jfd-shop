@@ -26,6 +26,7 @@ const TableBody = ({ data, columns }) => {
                         <td
                             key={column}
                             className="d-flex flex-column justify-content-center"
+                            style={{ background: "#dee2e6" }}
                         >
                             {renderContent(item, column)}
                         </td>

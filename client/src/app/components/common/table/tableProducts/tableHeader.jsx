@@ -34,6 +34,7 @@ const TableHeader = ({ onSort, selectedSort, columns }) => {
                                 : undefined
                         }
                         className="p-0 pb-3 pt-2"
+                        style={{ background: "#e9ecef" }}
                     >
                         <div
                             className="d-flex flex-row border border-warning justify-content-center p-0 m-0"

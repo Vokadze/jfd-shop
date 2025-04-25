@@ -39,6 +39,7 @@ const TableHeader = ({ selectedSort, onSort, columns }) => {
                                 : undefined
                         }
                         {...{ role: columns[column].path && "button" }}
+                        style={{ background: "#e9ecef" }}
                         scope="col"
                     >
                         {columns[column].name}{" "}
