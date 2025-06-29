@@ -3,10 +3,11 @@ import TextField from "../../common/form/textField";
 import { validator } from "../../../utils/validator";
 
 import SelectField from "../../common/form/selectField";
+import categoriesMock from "../../../mockData/categories.json";
 import RadioField from "../../common/form/radioField";
 import CheckBoxField from "../../common/form/checkBoxField";
-import { useDispatch, useSelector } from "react-redux";
-import { getCategories, loadCategoriesList } from "../../../store/categories";
+import { useDispatch } from "react-redux";
+import { loadCategoriesList } from "../../../store/categories";
 import { signUp } from "../../../store/users";
 import history from "../../../utils/history";
 
@@ -21,13 +22,11 @@ const RegisterForm = () => {
         licence: false
     });
 
-    const categories = useSelector(getCategories());
-
     useEffect(() => {
         dispatch(loadCategoriesList());
-    }, [categories]);
+    }, [categoriesMock]);
 
-    const categoriesList = categories.map((c) => ({
+    const categoriesList = categoriesMock.map((c) => ({
         name: c.name,
         value: c._id
     }));
