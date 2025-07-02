@@ -1,10 +1,10 @@
-FROM node:16 AS client
+FROM node:16.13.0 AS client
 
 WORKDIR /app/client
 
 COPY client/package.json /app/client
 
-RUN npm install
+RUN rm -rf node_modules && npm cache clean --force && npm install
 
 COPY client /app/client
 
