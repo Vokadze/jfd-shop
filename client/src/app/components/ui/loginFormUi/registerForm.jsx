@@ -30,7 +30,6 @@ const RegisterForm = () => {
         name: c.name,
         value: c._id
     }));
-    console.log(categoriesList);
     const [errors, setErrors] = useState({});
 
     const handleChange = (target) => {
